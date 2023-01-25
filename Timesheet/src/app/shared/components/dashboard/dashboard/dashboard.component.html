@@ -5,7 +5,7 @@
       <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open': sideNavStatus}"></app-sidenav>
 
       <div class="display-area" [ngClass]="{'display-area-shrink': sideNavStatus}">
-         <p>Content</p>
+         <router-outlet></router-outlet>
       </div>
    </main>
 </div>
