@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TimeOutComponent } from './time-out.component';
+import { TimeInTimeOutComponent } from './time-in-time-out.component';
 
-describe('TimeOutComponent', () => {
-  let component: TimeOutComponent;
-  let fixture: ComponentFixture<TimeOutComponent>;
+describe('TimeInTimeOutComponent', () => {
+  let component: TimeInTimeOutComponent;
+  let fixture: ComponentFixture<TimeInTimeOutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TimeOutComponent ]
+      declarations: [ TimeInTimeOutComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TimeOutComponent);
+    fixture = TestBed.createComponent(TimeInTimeOutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

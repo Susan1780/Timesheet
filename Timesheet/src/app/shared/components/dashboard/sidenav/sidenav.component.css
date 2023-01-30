@@ -33,6 +33,7 @@
    margin: 0px 15px 0px 10px;
    text-align: center;
    line-height:25px;
+   cursor: pointer;
 }
 
 .nav-list-item span {

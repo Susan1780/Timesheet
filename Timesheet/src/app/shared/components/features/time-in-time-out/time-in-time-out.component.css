@@ -1,0 +1,52 @@
+.container {
+   position: absolute;
+   top: 70px;
+   left: 65em;
+   width: 22em;
+}
+
+.card {
+   /* margin: 100px 26rem 0px 26em; */
+   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+   width: 20em;
+   height: 10em;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   background-color: rgb(231, 231, 231);
+}
+
+.time, .clck-btn {
+   align-self: center;
+}
+
+.time {
+   font-size: x-large;
+   font-weight: 600;
+}
+
+.clck-btn-changes {
+background-color: orange;
+}
+
+.clck-btn {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.clck-text {
+   font-size: 10px;
+}
+
+.interval {
+   font-size: small;
+   color: rgb(0, 132, 255);
+}
+
+table {
+   width: 70%;
+   position: absolute;
+   top: 6em;
+   left: 2em;
+ }
