@@ -1,0 +1,42 @@
+<div class="header">
+  <h1>Attendance Management</h1>
+</div>
+<div class="container">
+  <div class="calendar">
+    <mat-calendar [(selected)]="selected"></mat-calendar>
+  </div>
+  <div class="vl"></div>
+  <!-- <p>Selected date: {{selected}}</p> -->
+  <div *ngIf="showTimeOff" class="right">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="font-weight: 500; font-size: 20px;">Balances</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of balanceArray">
+         <td>{{ data }}</td>
+         <td>1 Day</td>
+        </tr>
+      </tbody>
+   </table>
+   <table class="table">
+      <thead>
+        <tr>
+          <th style="font-weight: 500; font-size: 20px;">Upcoming TimeOff</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of holidayArray">
+         <td>{{ data }}</td>
+         <td>Holiday</td>
+        </tr>
+      </tbody>
+   </table>
+  </div>
+  <!-- <div class="createBtn"></div> -->
+  <div *ngIf="showAbsence" class="createAbsence"></div>
+</div>

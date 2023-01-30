@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { columnVal, JiraStatusVal, JiraTypeVal } from 'src/app/core/constants/constant-values';
+// import { FormControl, FormGroup } from '@angular/forms';
+// import { columnVal, JiraStatusVal, JiraTypeVal } from 'src/app/core/constants/constant-values';
 import { CommonService } from 'src/app/shared/services/common/common.service';
 
 @Component({
@@ -10,34 +10,14 @@ import { CommonService } from 'src/app/shared/services/common/common.service';
 })
 export class AttendanceComponent implements OnInit {
 
-
+  selected: any;
+  showTimeOff: boolean = true;
+  showAbsence:boolean = false;
+  balanceArray: any = ['Earned Leave', 'Special Leave'];
+  holidayArray: any = ['Holi (Compulsory) (1 Day)', 'Mahavir Jayanthi (Optional) (1 Day)', 'Good Friday (Compulsory) (1 Day)', 'Vijayadasami (Optional) (2 days)'];
   constructor(private _service: CommonService) { }
 
   ngOnInit(): void {
-    // this.formVal = new  FormGroup({
-    //   date: new FormControl(''),
-    //   jiraId : new FormControl(''),
-    //   jiraType : new FormControl(''),
-    //   // jiraStatus : new FormControl(''),
-    //   jiraDesc : new FormControl(''),
-    //   taskDesc : new FormControl('')
-    // });
-
-    // this.getValues();
   }
-
-  // getValues(){
-  //     this._service.getData().subscribe((res: any) =>{
-  //     this.formArr = res;
-  //     console.log(this.formArr.value);
-  //    });
-  // }
-
-  // putValues($event: any){
-  //   let payload = this.formVal.value;
-  //   this._service.postData(payload).subscribe(() => {
-  //     this.getValues();
-  //   })
-  // }
-
+  
 }
