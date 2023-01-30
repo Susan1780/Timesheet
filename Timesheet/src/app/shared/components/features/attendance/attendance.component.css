@@ -1,16 +1,58 @@
-.card {
-   margin: 10px 0px 0px 0px;
-   width: calc(100vw - 65px);
-   height: calc(100vh - 8rem);
+.mat-calendar {
+width: 400px;
 }
 
 .header {
-   margin-top: 20px;
-   margin-bottom: 20px;
+   height: 70px;
+   background-image: linear-gradient(to left,rgb(65, 63, 65),rgb(169, 169, 176),rgb(60, 59, 60));
 }
 
-.form {
+.header>h1 {
+   color: #fff;
+   font-family: sans-serif;
+   position: absolute;
+   top: 20px;
+   left: 10px;
+}
+
+.container {
    display: flex;
-   justify-content: space-around;
-   align-items: center;
+   position: absolute;
+   top: 5em;
+   left: 8em;
+   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+   max-width: 70em;
+}
+
+.vl {
+   margin-left: 10px;
+   border-left:1px solid rgb(220, 217, 217);
+   height:500px
+}
+
+:host ::ng-deep .mat-calendar-body-selected {
+   background-color: rgb(75, 73, 75) !important;
+   color: #fff;
+}
+
+:host ::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+   background-color: rgb(169, 169, 176) !important;
+}
+
+.table {
+   width: 500px;
+   margin-left: 25px;
+   line-height: 35px;
+}
+
+.right {
+   display: flex;
+   flex-direction: column;
+   height: 500px;
+   justify-content: space-evenly;
+}
+
+.createBtn {
+   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+   background-color: black;
 }
