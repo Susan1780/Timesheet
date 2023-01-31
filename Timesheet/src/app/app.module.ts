@@ -11,7 +11,7 @@ import { TaskProgressComponent } from './shared/components/features/task-progres
 import { MyProfileComponent } from './shared/components/features/my-profile/my-profile.component';
 import { TimeInTimeOutComponent } from './shared/components/features/time-in-time-out/time-in-time-out.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import {MatTableModule} from '@angular/material/table';
@@ -51,7 +51,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatInputModule,
     MatButtonModule,
     MatDividerModule,
-    MatPaginatorModule 
+    MatPaginatorModule,
+    FormsModule 
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]

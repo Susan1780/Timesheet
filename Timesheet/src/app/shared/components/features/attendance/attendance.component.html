@@ -5,8 +5,7 @@
   <div class="calendar">
     <mat-calendar [(selected)]="selected"></mat-calendar>
   </div>
-  <div class="vl"></div>
-  <!-- <p>Selected date: {{selected}}</p> -->
+  
   <div *ngIf="showTimeOff" class="right">
     <table class="table">
       <thead>
@@ -37,6 +36,48 @@
       </tbody>
    </table>
   </div>
-  <!-- <div class="createBtn"></div> -->
-  <div *ngIf="showAbsence" class="createAbsence"></div>
+  <div *ngIf="showAbsence" class="createAbsence">
+      <form [formGroup]="form" class="leave-form">
+         <mat-form-field appearance="fill">
+            <mat-label>Leave Type</mat-label>
+            <mat-select formControlName="leavetype">
+              <mat-option value="option">Earned Leave</mat-option>
+              <mat-option value="option">Special Leave</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+         <mat-form-field appearance="outline">
+            <mat-label>Outline form field</mat-label>
+            <input matInput formControlName="availabledays">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="picker1" [(ngModel)]="date1" formControlName="date1">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" id="datePicker2">
+            <mat-label>End Date</mat-label>
+            <input matInput [matDatepicker]="picker2" [(ngModel)]="date2" formControlName="date2">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+          
+          <mat-form-field appearance="outline">
+            <input matInput formControlName="totaldays">
+          </mat-form-field>
+
+      </form>
+  </div>
+</div>
+<div class="card createBtn">
+   <div><button class="btn btn-dark btnC" (click)="showDialog()">Create Absence</button></div>
+   <div *ngIf="isBtnShown">
+      <span><button class="btn btn-dark btnV" (click)="onSubmit()">Submit</button></span>
+      <span><button class="btn btn-light btnE" (click)="goBack()">Cancel</button></span>
+   </div>
 </div>
