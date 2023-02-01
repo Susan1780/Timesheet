@@ -24,6 +24,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+import {MatIconModule} from '@angular/material/icon';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { TodoService } from './shared/services/todo-service/todo.service';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +39,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     AttendanceComponent,
     TaskProgressComponent,
     MyProfileComponent,
-    TimeInTimeOutComponent
+    TimeInTimeOutComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -52,8 +58,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatButtonModule,
     MatDividerModule,
     MatPaginatorModule,
-    FormsModule 
-  ],
+    FormsModule,
+    DragDropModule,
+    MatIconModule,
+    MatToolbarModule
+   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]
 })
