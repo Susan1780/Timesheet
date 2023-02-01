@@ -40,6 +40,7 @@ app-sidenav {
    width: calc(100% - 60px);   
    height: calc(100vh - 4rem);
    transition: left 250ms ease-in, width 250ms ease-in;
+   overflow-y: hidden;
 }
 
 .display-area-shrink {

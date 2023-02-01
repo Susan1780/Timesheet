@@ -21,14 +21,13 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
-import { MatNativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule, DateAdapter } from '@angular/material/core';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { TodoService } from './shared/services/todo-service/todo.service';
-
+import { CustomDateAdapter } from './shared/components/features/attendance/custom-date-adapter';
 
 @NgModule({
   declarations: [
@@ -63,7 +62,7 @@ import { TodoService } from './shared/services/todo-service/todo.service';
     MatIconModule,
     MatToolbarModule
    ],
-  providers: [MatDatepickerModule],
+  providers: [MatDatepickerModule, {provide: DateAdapter, useClass: CustomDateAdapter}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
