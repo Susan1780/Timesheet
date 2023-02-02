@@ -1,8 +1,12 @@
 nav {
-   height: 100%;
+   height: 56px;
 }
 
-.side-nav-button {
+.navbar-collapse{
+margin-left: 190px;
+}
+
+/* .side-nav-button {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -13,4 +17,4 @@ nav {
 .side-nav-button:hover {
    background-color: rgba(225, 225, 225, 0.2);
    border-radius: 30%;
-}
+} */

@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sidenav.component.css']
 })
 export class SidenavComponent implements OnInit {
-  @Input() sideNavStatus: boolean = false;
+  // @Input() sideNavStatus: boolean = false;
 
   list = [
     {number: '1', name: 'attendance', icon: 'fa-solid fa-table-cells', route : 'attendance'},
