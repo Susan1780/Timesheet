@@ -1,30 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './shared/components/dashboard/dashboard/dashboard.component';
-import { NavbarComponent } from './shared/components/dashboard/navbar/navbar.component';
-import { SidenavComponent } from './shared/components/dashboard/sidenav/sidenav.component';
-import { TimeOutComponent } from './shared/components/features/time-out/time-out.component';
-import { AttendanceComponent } from './shared/components/features/attendance/attendance.component';
-import { TaskProgressComponent } from './shared/components/features/task-progress/task-progress.component';
-import { MyProfileComponent } from './shared/components/features/my-profile/my-profile.component';
+import { TimeOutComponent } from './log/time-out/time-out.component';
+import { AttendanceComponent } from './log/attendance/attendance.component';
+import { TaskProgressComponent } from './log/task-progress/task-progress.component';
+import { MyProfileComponent } from './log/my-profile/my-profile.component';
+import { CoreModule } from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LogModule } from './log/log.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent,
-    NavbarComponent,
-    SidenavComponent,
-    TimeOutComponent,
-    AttendanceComponent,
-    TaskProgressComponent,
-    MyProfileComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    CoreModule,
+    LogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

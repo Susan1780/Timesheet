@@ -1,5 +1,5 @@
 <div class="container-fluid g-0">
-   <app-navbar (sideNavToggled)="sideNavStatus=$event;"></app-navbar>
+   <app-header (sideNavToggled)="sideNavStatus=$event;"></app-header>
 
    <main>
       <app-sidenav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open': sideNavStatus}"></app-sidenav>

@@ -1,0 +1,22 @@
+nav {
+  height: 100%;
+}
+
+img {
+ height: 40px;
+ width: 150px;
+ border-radius: 10px;
+}
+
+.side-nav-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.side-nav-button:hover {
+  background-color: rgba(225, 225, 225, 0.2);
+  border-radius: 30%;
+}
