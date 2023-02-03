@@ -6,16 +6,12 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  // @Output() sideNavToggled = new EventEmitter<boolean>();
-  // menuStatus:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  // isSideNavToggled() {
-  //   this.menuStatus =! this.menuStatus;
-  //   this.sideNavToggled.emit(this.menuStatus);
-  // }
-
+  logOut(){
+    alert('logout success');
+  }
 }
