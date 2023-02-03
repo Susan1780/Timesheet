@@ -5,8 +5,9 @@
   <div class="calendar">
     <mat-calendar
       [(selected)]="selectedDate"
-      [dateFilter]="myDateFilter"
+      [dateFilter]="dateFilter"
       (selectedChange)="onSelect($event)"
+      (dateChange)="addEvent($event)"
     ></mat-calendar>
   </div>
 
@@ -62,8 +63,7 @@
             matInput
             [matDatepicker]="picker1"
             formControlName="caldate1"
-            (dateChange)="dateChanged1($event)"
-            (change)="inputChanged($event)"
+            (dateChange)="addEvent($event)"
             readonly
           />
           <mat-hint>MM/DD/YYYY</mat-hint>
@@ -80,8 +80,7 @@
             matInput
             [matDatepicker]="picker2"
             formControlName="caldate2"
-            (dateChange)="dateChanged2($event)"
-            (change)="inputChanged2($event)"
+            (dateChange)="addEvent($event)"
             readonly
           />
           <mat-hint>MM/DD/YYYY</mat-hint>
@@ -92,8 +91,6 @@
           <mat-datepicker #picker2></mat-datepicker>
         </mat-form-field>
       </div>
-
-      <button class="btn btn-light" (click)="calculateDays()">calculate</button>
 
       <div class="leave-type">
         <mat-form-field appearance="outline">
