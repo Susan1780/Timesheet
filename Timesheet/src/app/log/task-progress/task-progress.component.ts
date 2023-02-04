@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { FormGroup, FormBuilder, Validators} from '@angular/forms'
-import { ITask } from './model/task';
-import { TodoService } from 'src/app/shared/services/todo-service/todo.service';
+import { ITask } from '../../shared/modal/task';
+import { TodoService } from 'src/app/shared/services/todo.service';
 
 
 @Component({

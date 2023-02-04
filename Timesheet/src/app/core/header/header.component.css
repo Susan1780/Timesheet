@@ -1,0 +1,13 @@
+nav {
+  height: 100%;
+}
+
+img {
+ height: 40px;
+ width: 150px;
+ border-radius: 10px;
+}
+
+.navbar-collapse{
+  margin-left: 190px;
+}

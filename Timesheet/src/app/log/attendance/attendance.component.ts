@@ -57,6 +57,11 @@ export class AttendanceComponent implements OnInit {
   addEvent(event: any){
     console.log(event);
     this.calculateDays();
+    if(this.form.controls['leavetype'].value === 'Half-a-day'){
+      this.form.patchValue({
+        totaldays: `${this.days - 0.5} Days`,
+      });
+    }
   }
 
   calculateDays() {

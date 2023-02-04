@@ -1,3 +1,7 @@
+.container{
+  display: flex;
+}
+
 .mat-calendar {
   width: 400px;
   padding: 30px;

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ITask } from '../../components/features/task-progress/model/task';
+import { ITask } from '../../shared/modal/task';
 
 @Injectable({
   providedIn: 'root'
