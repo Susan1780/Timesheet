@@ -4,7 +4,6 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms'
 import { ITask } from '../../shared/modal/task';
 import { TodoService } from 'src/app/shared/services/todo.service';
 
-
 @Component({
   selector: 'app-task-progress',
   templateUrl: './task-progress.component.html',
@@ -92,6 +91,3 @@ getData(){
   })
 }
 }
-  
-
-
