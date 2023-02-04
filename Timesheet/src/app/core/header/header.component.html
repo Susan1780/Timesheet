@@ -1,8 +1,4 @@
 <nav class="navbar navbar-expand navbar-dark bg-dark px-2">
-  <div class="side-nav-button p-2 me-3 text-light" (click)="isSideNavToggled()">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-  <!-- <a class="navbar-brand px-4" routerLink="#">LOGO</a> -->
   <img src="../../../../../assets/images/company-logo.png" alt="company-logo">
   <span style="width: 68em"></span>
   <div class="navbar-collapse">
@@ -16,8 +12,8 @@
           ><i class="fa-solid fa-user"></i
         ></a>
         <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" routerLink="profile">My Profile</a></li>
-          <li><a class="dropdown-item" routerLink="/">Logout</a></li>
+          <!-- <li><a class="dropdown-item" routerLink="profile">My Profile</a></li> -->
+          <li><a class="dropdown-item" routerLink="login" (click)="logOut()">Logout</a></li>
         </ul>
       </li>
     </ul>

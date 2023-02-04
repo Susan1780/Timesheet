@@ -13,8 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  isSideNavToggled() {
-    this.menuStatus =! this.menuStatus;
-    this.sideNavToggled.emit(this.menuStatus);
+  logOut(){
+    alert('logout success');
   }
 }

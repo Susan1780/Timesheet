@@ -1,0 +1,159 @@
+.container{
+  display: flex;
+}
+
+.mat-calendar {
+  width: 400px;
+  padding: 30px;
+}
+
+.header {
+  width: 78rem;
+  height: 56px;
+  background-image: linear-gradient(
+    to left,
+    rgb(65, 63, 65),
+    rgb(169, 169, 176),
+    rgb(60, 59, 60)
+  );
+}
+
+.header > h1 {
+  color: #fff;
+  font-family: sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 4em;
+  left: 8em;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  max-width: 70em;
+}
+
+.vl {
+  margin-left: 10px;
+  border-left: 1px solid rgb(220, 217, 217);
+  height: 500px;
+}
+
+:host ::ng-deep .mat-calendar-body-selected {
+  background-color: rgb(75, 73, 75) !important;
+  color: #fff;
+}
+
+/* :host ::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
+   background-color: rgb(169, 169, 176) !important;
+} */
+
+/* :host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-ripple {
+   background-color: rgb(75, 73, 75);
+}
+
+:host ::ng-deep .mat-primary .mat-option.mat-selected:not(.mat-option-disabled){
+   color:rgb(75, 73, 75);
+} */
+
+.table {
+  width: 500px;
+  margin-left: 25px;
+  line-height: 35px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-evenly;
+}
+
+.createBtn {
+  width: 86em;
+  height: 40px;
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  top: 37em;
+  margin-left: 10px;
+  /* background-color: black; */
+}
+
+.btnC {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 8%;
+  height: 30px;
+  font-size: 9px;
+  background: linear-gradient(
+    to right,
+    rgb(65, 64, 64),
+    rgb(166, 165, 165),
+    rgb(65, 64, 64)
+  );
+}
+
+.btnE {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  width: 8%;
+  height: 30px;
+  font-size: 9px;
+}
+
+.btnV {
+  position: absolute;
+  top: 4px;
+  right: 119px;
+  width: 8%;
+  height: 32px;
+  font-size: 9px;
+  background: linear-gradient(
+    to right,
+    rgb(65, 64, 64),
+    rgb(166, 165, 165),
+    rgb(65, 64, 64)
+  );
+}
+
+.leave-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.createAbsence {
+  margin-left: 30px;
+  width: 500px;
+}
+
+#datePicker2 {
+  /* padding-bottom: 20px; */
+  /* margin-top: 15px; */
+  margin-bottom: 10px;
+}
+
+:host ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  height: 50px;
+}
+
+.mat-datepicker-toggle {
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+}
+
+.highlight-date {
+  background-color: aqua;
+}
+
+.leave-type {
+  display: flex;
+  justify-content: space-between;
+}
