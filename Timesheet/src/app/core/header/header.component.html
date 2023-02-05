@@ -1,21 +1,42 @@
-<nav class="navbar navbar-expand navbar-dark bg-dark px-2">
-  <img src="../../../../../assets/images/company-logo.png" alt="company-logo">
+<nav class="navbar navbar-expand px-2">
+  <img class="company-log" src="../../../assets/images/comapny-title-card.png" alt="company-logo">
   <span style="width: 68em"></span>
+  <button class="dropdown home-btn" mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <span *ngFor="let element of list">
+      <button mat-menu-item><a routerLink="{{element.route}}">{{ element.name }}</a></button>
+    </span>
+  </mat-menu>
   <div class="navbar-collapse">
     <ul class="navbar-nav me-auto">
       <li class="nav-item dropstart">
-        <a
-          class="nav-link dropdown-toggle"
-          routerLink="#"
-          role="button"
-          data-bs-toggle="dropdown"
-          ><i class="fa-solid fa-user"></i
-        ></a>
+        <a class="nav-link profile" routerLink="#" role="button" data-bs-toggle="dropdown">
+          <img
+            src="https://mdbootstrap.com/img/Photos/Avatars/img (31).webp"
+            class="rounded-circle"
+            height="22"
+            alt="user"
+            loading="lazy"
+          />
+        </a>
         <ul class="dropdown-menu dropdown-menu-dark">
-          <!-- <li><a class="dropdown-item" routerLink="profile">My Profile</a></li> -->
-          <li><a class="dropdown-item" routerLink="login" (click)="logOut()">Logout</a></li>
+          <li><a class="dropdown-item" routerLink="profile">My Profile</a></li>
+          <li><a class="dropdown-item" routerLink="/">Logout</a></li>
         </ul>
       </li>
     </ul>
   </div>
 </nav>
+<!-- <img src="" alt=""> -->
+<div class="tm-common-page" style="width: 100%; height:685px;">
+  <div class="spHeader">
+    <div class="placeholderShimmer"></div>
+      <picture class="SplashHeader_image" data-testid="picture">
+        <source type="image" srcset="../../../assets/images/home-background.jpg">
+        <img alt src="../../../assets/images/home-background.png" class="SplashHeader_image" decoding="async" loading="lazy">
+      </picture>
+      <div class="SplashHeader_content">
+        <h1 class="SplashHeader_globalGreetingText">Good Evening!</h1>
+    </div>
+  </div>
+</div>

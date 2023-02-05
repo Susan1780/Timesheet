@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MaterialModule } from '../shared/material.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
   imports: [
     CommonModule,
     FormsModule,
+    MaterialModule,
     ReactiveFormsModule,
     CoreRoutingModule
   ]

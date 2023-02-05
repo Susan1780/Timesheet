@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CustomDateAdapter } from '../log/attendance/custom-date-adapter';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatIconModule,
     MatToolbarModule,
+    MatMenuModule,
     DragDropModule,
     ReactiveFormsModule,
     FormsModule
@@ -45,6 +47,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatNativeDateModule,
     MatCardModule,
     MatInputModule,
+    MatMenuModule,
     MatButtonModule,
     MatDividerModule,
     MatPaginatorModule,
