@@ -8,13 +8,13 @@
 }
 
 .header {
-  width: 78rem;
   height: 56px;
   background-image: linear-gradient(
     to left,
-    rgb(65, 63, 65),
-    rgb(169, 169, 176),
-    rgb(60, 59, 60)
+    #6472c0, 
+    #8596f0,
+    #606cb3 
+    
   );
 }
 
@@ -31,21 +31,20 @@
   justify-content: space-between;
   position: absolute;
   top: 4em;
-  left: 8em;
+  left: 10em;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   max-width: 70em;
 }
 
-.vl {
+/* .vl {
   margin-left: 10px;
   border-left: 1px solid rgb(220, 217, 217);
   height: 500px;
-}
-
-:host ::ng-deep .mat-calendar-body-selected {
-  background-color: rgb(75, 73, 75) !important;
+} */
+/* :host ::ng-deep .mat-calendar-body-selected {
+  background-color: #f5ce4f !important;
   color: #fff;
-}
+} */
 
 /* :host ::ng-deep .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical){
    background-color: rgb(169, 169, 176) !important;
@@ -73,14 +72,13 @@
 }
 
 .createBtn {
-  width: 86em;
+  width: 88em;
   height: 40px;
   position: absolute;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
   top: 37em;
-  margin-left: 10px;
-  /* background-color: black; */
+  margin-left: 20px;
 }
 
 .btnC {
@@ -92,9 +90,9 @@
   font-size: 9px;
   background: linear-gradient(
     to right,
-    rgb(65, 64, 64),
-    rgb(166, 165, 165),
-    rgb(65, 64, 64)
+    #3f51b5,
+    #8596f0,
+    #3f51b5 
   );
 }
 
@@ -116,9 +114,9 @@
   font-size: 9px;
   background: linear-gradient(
     to right,
-    rgb(65, 64, 64),
-    rgb(166, 165, 165),
-    rgb(65, 64, 64)
+    #3f51b5,
+    #8596f0,
+    #3f51b5
   );
 }
 

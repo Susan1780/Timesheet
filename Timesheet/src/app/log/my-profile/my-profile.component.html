@@ -1,1 +1,97 @@
-<p>my-profile works!</p>
+<div class="profile-container">
+   <div class="profile-pic-container">
+      <div class="profile-pic">
+         <label class="hoverable" for="fileInput">
+            <img [src]="url ? url : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png'">
+          </label>
+          <br/>
+          <input id="fileInput" type='file' (change)="onSelectFile($event)">
+          <!-- <button *ngIf="url" (click)="delete()" >delete</button> -->
+      </div>
+      <div class="profile" *ngFor="let data of userData">
+         <p>{{ data.empName }}</p>
+         <p>{{ data.empId }}</p>
+         <p>{{ data.empDesignation }}</p>
+         <p>{{ data.empPhone }}</p>
+         <p>{{ data.empMail }}</p>
+      </div>
+      <div class="profile-btn dropdown">
+         <button mat-stroked-button class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Settings<i class="fa fa-ellipsis-v" aria-hidden="true"></i></button>
+         <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/">Edit Profile</a></li>
+            <li><a class="dropdown-item" href="/">Another action</a></li>
+            <li><a class="dropdown-item" href="/">Something else here</a></li>
+          </ul>
+        
+      </div>
+   </div>
+   <div class="profile-details">
+      <mat-tab-group>
+         <mat-tab label="General Information">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>
+                     <mat-card-title></mat-card-title>
+                  </mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Personal Information">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Career">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Employment Information">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Bank Details">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Education Details">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Organisation Chart">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Salary CTC">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+         <mat-tab label="Total Rewards">
+            <div class="info-card">
+               <mat-card>
+                  <mat-card-content>Simple card</mat-card-content>
+               </mat-card>
+            </div> 
+         </mat-tab>
+       </mat-tab-group>
+   </div>
+</div>
