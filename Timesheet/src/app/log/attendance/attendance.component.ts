@@ -86,6 +86,7 @@ export class AttendanceComponent implements OnInit {
     this.form.patchValue({
       caldate1: new Date(this.selectedDate),
     });
+    this.addEvent(event);
   }
 
   onSubmit() {

@@ -167,3 +167,15 @@ input {
   height: 40px;
   width: 40px;
 }
+
+
+@media only screen and (min-width: 768px) {
+  
+  .company-logo{
+    height: 40em;
+    width: 53em;
+    top: 80px;
+    left: 0px;
+    position: absolute;
+  }
+}

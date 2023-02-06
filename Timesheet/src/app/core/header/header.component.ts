@@ -12,9 +12,9 @@ export class HeaderComponent implements OnInit {
 
   list = [
     {number: '1', name: 'home', icon: 'fa-solid fa-table-cells', route : '/home'},
-    {number: '2', name: 'create absents', icon: 'fa-solid fa-clock', route : 'home/attendance'},
-    {number: '3', name: 'timesheet', icon: 'fa-solid fa-list-check', route : 'home/time-in'},
-    {number: '4', name: 'Task Progress', route: 'home/task'}
+    {number: '2', name: 'create absents', icon: 'fa-solid fa-clock', route : 'attendance'},
+    {number: '3', name: 'timesheet', icon: 'fa-solid fa-list-check', route : 'time-in'},
+    {number: '4', name: 'Task Progress', route: 'task'}
   ];
 
   ngOnInit(): void {

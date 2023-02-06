@@ -13,7 +13,7 @@ main {
    z-index: 1;
 }
 
-app-sidenav {
+/* app-sidenav {
    position: absolute;
    left: 0rem;
    width: 55px;
@@ -43,7 +43,7 @@ app-sidenav:hover {
 app-sidenav:hover + .display-area-shrink {
    width: calc(100% - 230px);
    left: 230px;
-}
+} */
 
 /* @media (max-width: 480px) {
   app-sidenav {

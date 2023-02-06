@@ -16,7 +16,7 @@ import { CustomDateAdapter } from '../log/attendance/custom-date-adapter';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import {MatMenuModule} from '@angular/material/menu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 @NgModule({
   declarations: [],
@@ -35,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatToolbarModule,
     MatMenuModule,
+    MatTabsModule,
     DragDropModule,
     ReactiveFormsModule,
     FormsModule
@@ -53,6 +54,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatIconModule,
     MatToolbarModule,
+    MatTabsModule,
     DragDropModule,
     ReactiveFormsModule,
     FormsModule

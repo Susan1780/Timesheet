@@ -1,0 +1,78 @@
+.profile-container {
+   overflow-y: auto;
+}
+
+.profile-pic-container {
+   width: 91em;
+   height: 20em;
+   background-image: url('../../../assets/images/bgnd-image.jpg');
+   background-repeat: no-repeat;
+   background-size:cover;
+}
+ 
+ img {
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+ }
+ .hoverable{
+   position: relative;
+   top: 40px;
+   left: 50px;
+   display: block;
+   cursor: pointer;
+   height: 200px;
+   width: 200px;
+   border: 3px solid rgb(247, 198, 158);
+   border-radius: 50%;
+ }
+ 
+ #fileInput{
+   display: none;
+ }  
+
+ .profile {
+   left: 290px;
+   position: absolute;
+   top: 80px;
+ }
+
+ .profile>p {
+   color: rgb(136, 87, 47);
+   font-weight: 500;
+   line-height: 15px;
+   font-size: 15px;
+ }
+
+ .profile-btn {
+   position: absolute;
+   top: 50px;
+   right: 80px;
+ }
+
+ :host ::ng-deep .mat-stroked-button {
+   width: 100px;
+   text-align: left;
+ }
+
+:host .dropdown-toggle::after{
+   content: none;
+ }
+
+ i {
+   position: absolute;
+   right: 15px;
+   top: 10px;
+ }
+
+.info-card {
+   height: 260px;
+}
+
+ mat-card {
+   position: relative;
+   top: 15px;
+   left: 22em;
+   width: 45em;
+   height: 15em;
+ }
