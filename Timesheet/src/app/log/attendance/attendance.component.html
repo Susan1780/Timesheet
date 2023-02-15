@@ -1,135 +1,137 @@
-<div class="header">
-  <h1>Attendance Management</h1>
-</div>
-<div class="container">
-  <div class="calendar">
-    <mat-calendar
-      [(selected)]="selectedDate"
-      [dateFilter]="dateFilter"
-      (selectedChange)="onSelect($event)"
-      (dateChange)="addEvent($event)"
-    ></mat-calendar>
+<div class="attendance-container">
+  <div class="header">
+    <h1>Attendance Management</h1>
   </div>
+  <div class="container">
+    <div class="calendar">
+      <mat-calendar
+        [(selected)]="selectedDate"
+        [dateFilter]="dateFilter"
+        (selectedChange)="onSelect($event)"
+        (dateChange)="addEvent($event)"
+      ></mat-calendar>
+    </div>
 
-  <div *ngIf="showTimeOff" class="right">
-    <table class="table">
-      <thead>
-        <tr>
-          <th style="font-weight: 500; font-size: 20px">Balances</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of balanceArray">
-          <td>{{ data }}</td>
-          <td>1 Day</td>
-        </tr>
-      </tbody>
-    </table>
-    <table class="table">
-      <thead>
-        <tr>
-          <th style="font-weight: 500; font-size: 20px">Upcoming TimeOff</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let data of holidayArray">
-          <td>{{ data }}</td>
-          <td>Holiday</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div *ngIf="showAbsence" class="createAbsence">
-    <form [formGroup]="form" class="leave-form">
-      <mat-form-field appearance="fill">
-        <mat-label>Leave Method</mat-label>
-        <mat-select formControlName="leavemet">
-          <mat-option value="option">Earned Leave</mat-option>
-          <mat-option value="option">Special Leave</mat-option>
-        </mat-select>
-      </mat-form-field>
-
-      <mat-form-field appearance="fill">
-        <mat-label>Available Days</mat-label>
-        <input matInput formControlName="availabledays" readonly />
-      </mat-form-field>
-
-      <div class="leave-type">
+    <div *ngIf="showTimeOff" class="right">
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="font-weight: 500; font-size: 20px">Balances</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of balanceArray">
+            <td>{{ data }}</td>
+            <td>1 Day</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="table">
+        <thead>
+          <tr>
+            <th style="font-weight: 500; font-size: 20px">Upcoming TimeOff</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of holidayArray">
+            <td>{{ data }}</td>
+            <td>Holiday</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="showAbsence" class="createAbsence">
+      <form [formGroup]="form" class="leave-form">
         <mat-form-field appearance="fill">
-          <mat-label>Start Date</mat-label>
-          <input
-            matInput
-            [matDatepicker]="picker1"
-            formControlName="caldate1"
-            (dateChange)="addEvent($event)"
-            readonly
-          />
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle
-            matIconSuffix
-            [for]="picker1"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #picker1></mat-datepicker>
-        </mat-form-field>
-
-        <mat-form-field appearance="fill" id="datePicker2">
-          <mat-label>End Date</mat-label>
-          <input
-            matInput
-            [matDatepicker]="picker2"
-            formControlName="caldate2"
-            (dateChange)="addEvent($event)"
-            readonly
-          />
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle
-            matIconSuffix
-            [for]="picker2"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #picker2></mat-datepicker>
-        </mat-form-field>
-      </div>
-
-      <div class="leave-type">
-        <mat-form-field appearance="outline">
-          <mat-label>No. of Days</mat-label>
-          <input matInput formControlName="totaldays" readonly />
-        </mat-form-field>
-
-        <mat-form-field appearance="outline">
-          <mat-label>Leave Type</mat-label>
-          <mat-select formControlName="leavetype">
-            <mat-option value="option">Full Day</mat-option>
-            <mat-option value="option">Half-a-day</mat-option>
+          <mat-label>Leave Method</mat-label>
+          <mat-select formControlName="leavemet">
+            <mat-option value="option">Earned Leave</mat-option>
+            <mat-option value="option">Special Leave</mat-option>
           </mat-select>
         </mat-form-field>
-      </div>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Comment is required!</mat-label>
-        <textarea matInput formControlName="comments"></textarea>
-      </mat-form-field>
-    </form>
+        <mat-form-field appearance="fill">
+          <mat-label>Available Days</mat-label>
+          <input matInput formControlName="availabledays" readonly />
+        </mat-form-field>
+
+        <div class="leave-type">
+          <mat-form-field appearance="fill">
+            <mat-label>Start Date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker1"
+              formControlName="caldate1"
+              (dateChange)="addEvent($event)"
+              readonly
+            />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker1"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" id="datePicker2">
+            <mat-label>End Date</mat-label>
+            <input
+              matInput
+              [matDatepicker]="picker2"
+              formControlName="caldate2"
+              (dateChange)="addEvent($event)"
+              readonly
+            />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker2"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="leave-type">
+          <mat-form-field appearance="outline">
+            <mat-label>No. of Days</mat-label>
+            <input matInput formControlName="totaldays" readonly />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Leave Type</mat-label>
+            <mat-select formControlName="leavetype">
+              <mat-option value="option">Full Day</mat-option>
+              <mat-option value="option">Half-a-day</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Comment is required!</mat-label>
+          <textarea matInput formControlName="comments"></textarea>
+        </mat-form-field>
+      </form>
+    </div>
   </div>
-</div>
-<div class="card createBtn">
-  <div>
-    <button class="btn btn-dark btnC" (click)="showDialog()">
-      Create Absence
-    </button>
-  </div>
-  <div *ngIf="isBtnShown">
-    <span
-      ><button class="btn btn-dark btnV" (click)="onSubmit()">
-        Submit
-      </button></span
-    >
-    <span
-      ><button class="btn btn-light btnE" (click)="goBack()">
-        Cancel
-      </button></span
-    >
+  <div class="card createBtn">
+    <div>
+      <button class="btn btn-dark btnC" (click)="showDialog()">
+        Create Absence
+      </button>
+    </div>
+    <div *ngIf="isBtnShown">
+      <span
+        ><button class="btn btn-dark btnV" (click)="onSubmit()">
+          Submit
+        </button></span
+      >
+      <span
+        ><button class="btn btn-light btnE" (click)="goBack()">
+          Cancel
+        </button></span
+      >
+    </div>
   </div>
 </div>

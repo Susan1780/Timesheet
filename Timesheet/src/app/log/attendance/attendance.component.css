@@ -1,3 +1,7 @@
+/* :host ::ng-deep .attendance-container {
+  background-image: url('../../../assets/images/background4.png');
+} */
+
 .container{
   display: flex;
 }

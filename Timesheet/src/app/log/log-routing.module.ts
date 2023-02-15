@@ -6,10 +6,10 @@ import { TaskProgressComponent } from './task-progress/task-progress.component';
 import { TimeInTimeOutComponent } from './time-in-time-out/time-in-time-out.component';
 
 export const routes: Routes = [
-  {path:'home/attendance',component: AttendanceComponent},
-  {path:'home/time-in',component:TimeInTimeOutComponent},
-  {path:'home/task',component: TaskProgressComponent},
-  {path:'home/profile',component: MyProfileComponent}
+  {path:'attendance',component: AttendanceComponent},
+  {path:'time-in',component:TimeInTimeOutComponent},
+  {path:'task',component: TaskProgressComponent},
+  {path:'profile',component: MyProfileComponent}
 ];
 
 @NgModule({

@@ -1,65 +1,15 @@
-app-dashboard {
-   position: fixed;
+container-fluid {
+   position: absolute;
    width: 100%;
    top: 0px;
-   height: 4rem;
+   height: 100%;
    z-index: 2;
 }
 
 main {
    position: absolute;
+   height: 100%;
    width: 100%;
    top: 3.5rem;
    z-index: 1;
 }
-
-/* app-sidenav {
-   position: absolute;
-   left: 0rem;
-   width: 55px;
-   height: calc(100vh - 3.5rem);
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   background-color: rgba(34, 34, 34, 1);
-   overflow-x: hidden;
-   white-space: nowrap;
-   transition: width 250ms ease-in;
-   z-index: 99;
-}
-
-app-sidenav:hover {
-   width: 230px;
-   z-index: 1;
-}
-
-.display-area {
-   position: relative;
-   left: 56px;
-   width: calc(100% - 60px);   
-   height: calc(100vh - 4rem);
-   transition: left 250ms ease-in, width 250ms ease-in;
-   overflow: hidden;
-}
-
-app-sidenav:hover + .display-area-shrink {
-   width: calc(100% - 230px);
-   left: 230px;
-} */
-
-/* @media (max-width: 480px) {
-  app-sidenav {
-   position: absolute;
-   left: 0rem;
-   width: 500px;
-   height: 0px;
-   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-   background-color: rgba(34, 34, 34, 1);
-   border-top: 1px solid white;
-   overflow-x: hidden;
-   white-space: nowrap;
-   transition: height 250ms ease-in;
-}
-
-   .app-side-nav-open {
-      height: 55px;
-   }
-} */

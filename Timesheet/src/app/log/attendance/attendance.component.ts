@@ -45,7 +45,7 @@ export class AttendanceComponent implements OnInit {
     this.form.patchValue({
       availabledays: '6',
       totaldays: '0',
-      caldate2: this.currentDate,
+      caldate2: this.currentDate
     });
   }
 

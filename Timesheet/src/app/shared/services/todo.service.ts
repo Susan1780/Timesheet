@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ITask } from '../../shared/modal/task';
+// import { ITask } from '../../shared/modal/task';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,9 @@ export class TodoService {
 
   constructor(private _http:HttpClient) { }
 
-  getData(){
-    return this._http.get<ITask[]>(this.Api)
-  }
+  // getData(){
+  //   return this._http.get<ITask[]>(this.Api)
+  // }
 
   addData(data: any){
     return this._http.post(this.Api, this.addData, data)
